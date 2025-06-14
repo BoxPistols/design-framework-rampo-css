@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シンプルテーマテスト</title>
+    <style>
+      /* 最小限のテーマ切り替えテスト */
+      :root {
+        --bg-primary: #ffffff;
+        --text-primary: #000000;
+      }
+
+      [data-theme="dark"] {
+        --bg-primary: #0f172a;
+        --text-primary: #f8fafc;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: system-ui, sans-serif;
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .test-card {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        border: 1px solid var(--text-primary);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border: 1px solid var(--text-primary);
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>シンプルテーマテスト</h1>
+
+    <p>現在のdata-theme: <span id="current-theme">なし</span></p>
+
+    <button onclick="setDark()">ダークモード</button>
+    <button onclick="setLight()">ライトモード</button>
+
+    <div class="test-card">
+      <h3>テストカード</h3>
+      <p>この背景とテキストの色が変わるはずです。</p>
+    </div>
+
+    <script>
+      function updateDisplay() {
+        const theme = document.documentElement.getAttribute("data-theme");
+        document.getElementById("current-theme").textContent = theme || "なし";
+      }
+
+      function setDark() {
+        document.documentElement.setAttribute("data-theme", "dark");
+        updateDisplay();
+      }
+
+      function setLight() {
+        document.documentElement.removeAttribute("data-theme");
+        updateDisplay();
+      }
+
+      // 変更を監視
+      const observer = new MutationObserver(updateDisplay);
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["data-theme"],
+      });
+
+      updateDisplay();
+    </script>
+  </body>
+</html>

@@ -1,255 +1,298 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSSフレームワーク例</title>
-    <link rel="stylesheet" href="framework.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <a href="#" class="navbar-brand">MyFramework</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSSフレームワーク例</title>
+  <link rel="stylesheet" href="framework.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">MyFramework</a>
+    <div class="flex items-center gap-4">
       <ul class="nav">
-        <li class="nav-item"><a href="#" class="nav-link active">ホーム</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">ホーム</a>
+        </li>
         <li class="nav-item"><a href="#" class="nav-link">概要</a></li>
         <li class="nav-item"><a href="#" class="nav-link">コンタクト</a></li>
       </ul>
-    </nav>
+      <button class="theme-toggle" title="テーマ切り替え">
+        <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+          </path>
+        </svg>
+        <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
 
-    <main class="container">
-      <section class="py-8">
-        <h1 class="text-center mb-4">独自CSSフレームワーク</h1>
-        <p class="text-center text-gray-600 mb-8">
-          モダンで使いやすいCSSフレームワークのデモページです。
-        </p>
+  <main class="container">
+    <section class="py-8">
+      <h1 class="text-center mb-4">独自CSSフレームワーク</h1>
+      <p class="text-center mb-8" style="color: var(--text-secondary)">
+        モダンで使いやすいCSSフレームワークのデモページです。
+      </p>
 
-        <div class="grid grid-cols-3 md:grid-cols-3 mb-8">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="m-0">レスポンシブ対応</h3>
-            </div>
-            <div class="card-body">
-              <p>
-                全てのコンポーネントはモバイルファーストでレスポンシブ対応しています。
-              </p>
-            </div>
+      <div class="grid grid-cols-3 md:grid-cols-3 mb-8">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="m-0">レスポンシブ対応</h3>
           </div>
-
-          <div class="card">
-            <div class="card-header">
-              <h3 class="m-0">ユーティリティクラス</h3>
-            </div>
-            <div class="card-body">
-              <p>
-                豊富なユーティリティクラスで素早くレイアウトを構築できます。
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <h3 class="m-0">カスタマイズ可能</h3>
-            </div>
-            <div class="card-body">
-              <p>CSS変数を使用してテーマを簡単にカスタマイズできます。</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mb-8">
-          <div class="col-12 col-md-6">
-            <h2>ボタンの例</h2>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <button class="btn btn-primary">プライマリ</button>
-              <button class="btn btn-secondary">セカンダリ</button>
-              <button class="btn btn-outline">アウトライン</button>
-              <button class="btn btn-ghost">ゴースト</button>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <button class="btn btn-primary btn-sm">小</button>
-              <button class="btn btn-primary">通常</button>
-              <button class="btn btn-primary btn-lg">大</button>
-            </div>
-
-            <h3>ボタングループ</h3>
-            <div class="btn-group mb-4">
-              <button class="btn btn-outline">左</button>
-              <button class="btn btn-outline">中央</button>
-              <button class="btn btn-outline">右</button>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <h2>フォームの例</h2>
-            <form>
-              <div class="form-group">
-                <label class="form-label" for="name">名前</label>
-                <input
-                  type="text"
-                  class="form-input"
-                  id="name"
-                  placeholder="お名前を入力"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="email">メールアドレス</label>
-                <input
-                  type="email"
-                  class="form-input"
-                  id="email"
-                  placeholder="email@example.com"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="country">国</label>
-                <select class="form-input form-select" id="country">
-                  <option>日本</option>
-                  <option>アメリカ</option>
-                  <option>イギリス</option>
-                  <option>ドイツ</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="birthdate">生年月日</label>
-                <input
-                  type="date"
-                  class="form-input form-date"
-                  id="birthdate"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="time">時間</label>
-                <input
-                  type="time"
-                  class="form-input form-time"
-                  id="time"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="search">検索</label>
-                <input
-                  type="search"
-                  class="form-input form-search"
-                  id="search"
-                  placeholder="検索キーワード"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="volume">音量</label>
-                <input
-                  type="range"
-                  class="form-range"
-                  id="volume"
-                  min="0"
-                  max="100"
-                  value="50"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="message">メッセージ</label>
-                <textarea
-                  class="form-input form-textarea"
-                  id="message"
-                  placeholder="メッセージを入力"
-                ></textarea>
-              </div>
-
-              <div class="form-group">
-                <input type="checkbox" class="form-checkbox" id="newsletter">
-                <label for="newsletter">ニュースレターを受け取る</label>
-              </div>
-
-              <div class="form-group">
-                <label class="form-switch">
-                  <input type="checkbox" id="notifications">
-                  <span class="form-switch-slider"></span>
-                </label>
-                <label for="notifications" class="ml-2">通知を有効にする</label>
-              </div>
-
-              <button type="submit" class="btn btn-primary">送信</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="mb-8">
-          <h2>アラートの例</h2>
-          <div class="alert alert-info">
-            <strong>情報:</strong> これは情報アラートです。
-          </div>
-          <div class="alert alert-success">
-            <strong>成功:</strong> 操作が正常に完了しました。
-          </div>
-          <div class="alert alert-warning">
-            <strong>警告:</strong> 注意が必要な状況です。
-          </div>
-          <div class="alert alert-error">
-            <strong>エラー:</strong> 問題が発生しました。
-          </div>
-        </div>
-
-        <div class="mb-8">
-          <h2>バッジの例</h2>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-primary">プライマリ</span>
-            <span class="badge badge-secondary">セカンダリ</span>
-            <span class="badge badge-success">成功</span>
-            <span class="badge badge-warning">警告</span>
-            <span class="badge badge-error">エラー</span>
-          </div>
-        </div>
-
-        <div class="mb-8">
-          <h2>プログレスバーの例</h2>
-          <div class="progress mb-4">
-            <div class="progress-bar" style="width: 75%"></div>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span class="spinner"></span>
-            <span>読み込み中...</span>
-          </div>
-        </div>
-
-        <div class="text-center py-8">
-          <h2>ユーティリティクラスの例</h2>
-          <div class="bg-gray-100 p-4 rounded mb-4">
-            <p class="text-lg font-bold text-primary">
-              プライマリカラーの大きなテキスト
+          <div class="card-body">
+            <p>
+              全てのコンポーネントはモバイルファーストでレスポンシブ対応しています。
             </p>
-            <p class="text-sm text-gray-500">小さなグレーのテキスト</p>
-          </div>
-
-          <h3>Gapユーティリティ</h3>
-          <div class="flex justify-center items-center gap-4 mb-4">
-            <div class="bg-primary text-white p-3 rounded">Flexbox</div>
-            <div class="bg-secondary text-white p-3 rounded">レイアウト</div>
-            <div class="bg-success text-white p-3 rounded">システム</div>
-          </div>
-
-          <div class="grid grid-cols-3 gap-6 mb-4">
-            <div class="bg-warning text-white p-3 rounded text-center">Grid 1</div>
-            <div class="bg-warning text-white p-3 rounded text-center">Grid 2</div>
-            <div class="bg-warning text-white p-3 rounded text-center">Grid 3</div>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="bg-gray-800 text-white py-8 mt-12">
-      <div class="container">
-        <div class="text-center">
-          <p>&copy; 2024 MyFramework. All rights reserved.</p>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="m-0">ユーティリティクラス</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              豊富なユーティリティクラスで素早くレイアウトを構築できます。
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="m-0">カスタマイズ可能</h3>
+          </div>
+          <div class="card-body">
+            <p>CSS変数を使用してテーマを簡単にカスタマイズできます。</p>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+
+      <div class="row mb-8">
+        <div class="col-12 col-md-6">
+          <h2>ボタンの例</h2>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-primary">プライマリ</button>
+            <button class="btn btn-secondary">セカンダリ</button>
+            <button class="btn btn-outline">アウトライン</button>
+            <button class="btn btn-ghost">ゴースト</button>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-primary btn-sm">小</button>
+            <button class="btn btn-primary">通常</button>
+            <button class="btn btn-primary btn-lg">大</button>
+          </div>
+
+          <h3>ボタングループ</h3>
+          <div class="btn-group mb-4">
+            <button class="btn btn-outline">左</button>
+            <button class="btn btn-outline">中央</button>
+            <button class="btn btn-outline">右</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h2>フォームの例</h2>
+          <form>
+            <div class="form-group">
+              <label class="form-label" for="name">名前</label>
+              <input type="text" class="form-input" id="name" placeholder="お名前を入力" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">メールアドレス</label>
+              <input type="email" class="form-input" id="email" placeholder="email@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="country">国</label>
+              <select class="form-input form-select" id="country">
+                <option>日本</option>
+                <option>アメリカ</option>
+                <option>イギリス</option>
+                <option>ドイツ</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="birthdate">生年月日</label>
+              <input type="date" class="form-input form-date" id="birthdate" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="time">時間</label>
+              <input type="time" class="form-input form-time" id="time" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="search">検索</label>
+              <input type="search" class="form-input form-search" id="search" placeholder="検索キーワード" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="volume">音量</label>
+              <input type="range" class="form-range" id="volume" min="0" max="100" value="50" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">メッセージ</label>
+              <textarea class="form-input form-textarea" id="message" placeholder="メッセージを入力"></textarea>
+            </div>
+
+            <div class="form-group">
+              <input type="checkbox" class="form-checkbox" id="newsletter" />
+              <label for="newsletter">ニュースレターを受け取る</label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-switch">
+                <input type="checkbox" id="notifications" />
+                <span class="form-switch-slider"></span>
+              </label>
+              <label for="notifications" class="ml-2">通知を有効にする</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">送信</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <h2>アラートの例</h2>
+        <div class="alert alert-info">
+          <strong>情報:</strong> これは情報アラートです。
+        </div>
+        <div class="alert alert-success">
+          <strong>成功:</strong> 操作が正常に完了しました。
+        </div>
+        <div class="alert alert-warning">
+          <strong>警告:</strong> 注意が必要な状況です。
+        </div>
+        <div class="alert alert-error">
+          <strong>エラー:</strong> 問題が発生しました。
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <h2>バッジの例</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-primary">プライマリ</span>
+          <span class="badge badge-secondary">セカンダリ</span>
+          <span class="badge badge-success">成功</span>
+          <span class="badge badge-warning">警告</span>
+          <span class="badge badge-error">エラー</span>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <h2>プログレスバーの例</h2>
+        <div class="progress mb-4">
+          <div class="progress-bar" style="width: 75%"></div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span class="spinner"></span>
+          <span>読み込み中...</span>
+        </div>
+      </div>
+
+      <div class="text-center py-8">
+        <h2>ユーティリティクラスの例</h2>
+        <div class="p-4 rounded mb-4" style="background-color: var(--bg-secondary)">
+          <p class="text-lg font-bold text-primary">
+            プライマリカラーの大きなテキスト
+          </p>
+          <p class="text-sm" style="color: var(--text-muted)">
+            小さなグレーのテキスト
+          </p>
+        </div>
+
+        <h3>Gapユーティリティ</h3>
+        <div class="flex justify-center items-center gap-4 mb-4">
+          <div class="bg-primary text-white p-3 rounded">Flexbox</div>
+          <div class="bg-secondary text-white p-3 rounded">レイアウト</div>
+          <div class="bg-success text-white p-3 rounded">システム</div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 mb-4">
+          <div class="bg-warning text-white p-3 rounded text-center">
+            Grid 1
+          </div>
+          <div class="bg-warning text-white p-3 rounded text-center">
+            Grid 2
+          </div>
+          <div class="bg-warning text-white p-3 rounded text-center">
+            Grid 3
+          </div>
+        </div>
+
+        <!-- grid -->
+        <div class="grid grid-cols-12 gap-4 mb-4">
+          <div class="col-span-6 bg-primary text-white p-3 rounded">
+            6カラム
+          </div>
+          <div class="col-span-6 bg-secondary text-white p-3 rounded">
+            6カラム
+          </div>
+          <div class="col-span-4 bg-success text-white p-3 rounded">
+            4カラム
+          </div>
+          <div class="col-span-4 bg-warning text-white p-3 rounded">
+            4カラム
+          </div>
+          <div class="col-span-4 bg-error text-white p-3 rounded">
+            4カラム
+          </div>
+        </div>
+
+        <h3>Flexboxユーティリティ</h3>
+        <div class="flex justify-between items-center mb-4">
+          <div class="bg-primary text-white p-3 rounded">左</div>
+          <div class="bg-secondary text-white p-3 rounded">中央</div>
+          <div class="bg-success text-white p-3 rounded">右</div>
+        </div>
+        <div class="flex justify-around items-center mb-4">
+          <div class="bg-primary text-white p-3 rounded">左</div>
+          <div class="bg-secondary text-white p-3 rounded">中央</div>
+          <div class="bg-success text-white p-3 rounded">右</div>
+        </div>
+        <div class="flex justify-evenly items-center mb-4">
+          <div class="bg-primary text-white p-3 rounded">左</div>
+          <div class="bg-secondary text-white p-3 rounded">中央</div>
+          <div class="bg-success text-white p-3 rounded">右</div>
+        </div>
+      </div>
+
+
+      <h3>ダークモード対応</h3>
+      <div class="p-4 rounded mb-4" style="background-color: var(--gray-800)">
+        <p class="mb-2" style="color: var(--gray-200)">
+          このフレームワークは自動的にダークモードに対応します。
+        </p>
+        <p class="text-sm" style="color: var(--text-muted)">
+          右上のボタンでテーマを切り替えてみてください。
+        </p>
+      </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 pb-1 mt-12" style="background-color: var(--bg-secondary)">
+    <div class="container">
+      <div class="text-center">
+        <p>&copy; 2024 MyFramework. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+
 </html>

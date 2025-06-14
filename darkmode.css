@@ -1,0 +1,189 @@
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --border-color: #d1d5db;
+  --border-light: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-color: #475569;
+  --border-light: #334155;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+
+  --gray-50: #1e293b;
+  --gray-100: #334155;
+  --gray-200: #475569;
+  --gray-300: #64748b;
+  --gray-400: #94a3b8;
+  --gray-500: #cbd5e1;
+  --gray-600: #e2e8f0;
+  --gray-700: #f1f5f9;
+  --gray-800: #f8fafc;
+  --gray-900: #ffffff;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .alert-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+[data-theme="dark"] .alert-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fcd34d;
+}
+
+[data-theme="dark"] .alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.theme-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.theme-toggle .sun-icon {
+  display: none;
+}
+
+.theme-toggle .moon-icon {
+  display: block;
+}
+
+[data-theme="light"] .theme-toggle .sun-icon {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-muted: #6b7280;
+    --border-color: #d1d5db;
+    --border-light: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+  }
+
+  :root:not([data-theme]) .theme-toggle .sun-icon {
+    display: none;
+  }
+
+  :root:not([data-theme]) .theme-toggle .moon-icon {
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border-color: #475569;
+    --border-light: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --gray-50: #1e293b;
+    --gray-100: #334155;
+    --gray-200: #475569;
+    --gray-300: #64748b;
+    --gray-400: #94a3b8;
+    --gray-500: #cbd5e1;
+    --gray-600: #e2e8f0;
+    --gray-700: #f1f5f9;
+    --gray-800: #f8fafc;
+    --gray-900: #ffffff;
+  }
+
+  :root:not([data-theme]) .theme-toggle .sun-icon {
+    display: block;
+  }
+
+  :root:not([data-theme]) .theme-toggle .moon-icon {
+    display: none;
+  }
+}
