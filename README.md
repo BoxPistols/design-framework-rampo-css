@@ -1,4 +1,4 @@
-# MyFramework CSS
+# CSS Framework Rampo CSS
 
 シンプルで使いやすいモダン CSS フレームワークです。Tailwind CSS ライクなユーティリティクラスと、再利用可能なコンポーネントを提供します。
 
@@ -15,7 +15,7 @@
 ### CDN 経由で使用
 
 ```html
-<link rel="stylesheet" href="framework.css" />
+<link rel="stylesheet" href="./css/framework.css" />
 ```
 
 ### ファイルをダウンロードして使用
@@ -29,12 +29,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyFramework Example</title>
-    <link rel="stylesheet" href="framework.css" />
+    <title>CSS Framework Rampo Example</title>
+    <link rel="stylesheet" href="./css/framework.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center text-primary">Hello MyFramework!</h1>
+      <h1 class="text-center text-primary">Hello CSS Framework Rampo!</h1>
     </div>
   </body>
 </html>

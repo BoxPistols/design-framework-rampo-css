@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CSSフレームワーク例</title>
-  <link rel="stylesheet" href="framework.css" />
+  <link rel="stylesheet" href="./css/framework.css" />
 </head>
 
 <body>
   <nav class="navbar">
-    <a href="#" class="navbar-brand">MyFramework</a>
+    <a href="#" class="navbar-brand">CSS Framework Rampo</a>
     <div class="flex items-center gap-4">
       <ul class="nav">
         <li class="nav-item">
@@ -251,6 +251,20 @@
           </div>
         </div>
 
+        <!-- 3カラム -->
+        <div class="grid grid-cols-12 gap-4 mb-4">
+          <div class="col-span-1 bg-primary text-white p-3 rounded">
+            col-span-1
+          </div>
+          <div class="col-span-1 bg-secondary text-white p-3 rounded">
+            col-span-1
+          </div>
+          <div class="col-span-1 bg-success text-white p-3 rounded">
+            col-span-1
+          </div>
+        </div>
+
+
         <h3>Flexboxユーティリティ</h3>
         <div class="flex justify-between items-center mb-4">
           <div class="bg-primary text-white p-3 rounded">左</div>
@@ -269,10 +283,9 @@
         </div>
       </div>
 
-
       <h3>ダークモード対応</h3>
       <div class="p-4 rounded mb-4" style="background-color: var(--gray-800)">
-        <p class="mb-2" style="color: var(--gray-200)">
+        <p class="mb-2" style="color: var(--gray-100)">
           このフレームワークは自動的にダークモードに対応します。
         </p>
         <p class="text-sm" style="color: var(--text-muted)">
@@ -287,12 +300,12 @@
   <footer class="py-4 pb-1 mt-12" style="background-color: var(--bg-secondary)">
     <div class="container">
       <div class="text-center">
-        <p>&copy; 2024 MyFramework. All rights reserved.</p>
+        <p>&copy; 2024 CSS Framework Rampo. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="theme.js"></script>
+  <script src="./js/theme.js"></script>
 </body>
 
 </html>
