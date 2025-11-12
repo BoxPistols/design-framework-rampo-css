@@ -1,27 +1,64 @@
-# CSS Framework Rampo CSS
+# Rampo CSS
+
+A modern, utility-first CSS framework inspired by Tailwind CSS with built-in components and theming support.
 
 シンプルで使いやすいモダン CSS フレームワークです。Tailwind CSS ライクなユーティリティクラスと、再利用可能なコンポーネントを提供します。
 
-## 特徴
+## 特徴 / Features
 
 - 🎨 **モダンなデザイン** - CSS 変数を使用したカスタマイズ可能なテーマシステム
 - 📱 **レスポンシブ対応** - モバイルファーストのレスポンシブデザイン
-- ⚡ **軽量** - 必要最小限の機能を効率的に実装
+- ⚡ **軽量** - 必要最小限の機能を効率的に実装（約33KB minified）
 - 🔧 **ユーティリティファースト** - 豊富なユーティリティクラスで高速開発
 - 🧩 **コンポーネント付き** - よく使われる UI コンポーネントを内蔵
+- 🌙 **ダークモード対応** - CSS変数ベースのテーマ切り替え
 
-## クイックスタート
+## インストール / Installation
+
+### npm
+
+```bash
+npm install rampo-css
+```
+
+### yarn
+
+```bash
+yarn add rampo-css
+```
+
+### pnpm
+
+```bash
+pnpm add rampo-css
+```
+
+## 使用方法 / Usage
 
 ### CDN 経由で使用
 
 ```html
-<link rel="stylesheet" href="./css/framework.css" />
+<!-- Minified version (recommended) -->
+<link rel="stylesheet" href="https://unpkg.com/rampo-css/dist/rampo.min.css" />
+
+<!-- Full version -->
+<link rel="stylesheet" href="https://unpkg.com/rampo-css/dist/rampo.css" />
 ```
 
-### ファイルをダウンロードして使用
+### npm でインストールした場合
 
-1. `framework.css`をダウンロード
-2. HTML ファイルにリンクを追加
+```javascript
+// Import in your JavaScript/TypeScript
+import 'rampo-css/dist/rampo.min.css';
+```
+
+または CSS で直接インポート：
+
+```css
+@import 'rampo-css/dist/rampo.min.css';
+```
+
+### HTML での使用例
 
 ```html
 <!DOCTYPE html>
@@ -29,12 +66,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Framework Rampo Example</title>
-    <link rel="stylesheet" href="./css/framework.css" />
+    <title>Rampo CSS Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/rampo-css/dist/rampo.min.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center text-primary">Hello CSS Framework Rampo!</h1>
+      <h1 class="text-center text-primary">Hello Rampo CSS!</h1>
+      <button class="btn btn-primary">Get Started</button>
     </div>
   </body>
 </html>
@@ -318,14 +356,18 @@ MIT License
 
 プルリクエストやイシューの報告をお待ちしています。
 
-## 更新履歴
+## 更新履歴 / Changelog
 
 ### v1.0.0
 
-- 初回リリース
-- 基本的なユーティリティクラス
-- コンポーネントライブラリ
-- レスポンシブサポート
-- Gap ユーティリティ追加
-- ボタングループコンポーネント追加
-- フォーム要素の拡充（Select、DatePicker）
+- 初回リリース / Initial release
+- 基本的なユーティリティクラス / Basic utility classes
+- コンポーネントライブラリ / Component library
+- レスポンシブサポート / Responsive support
+- Gap ユーティリティ追加 / Gap utilities
+- ボタングループコンポーネント追加 / Button group components
+- フォーム要素の拡充（Select、DatePicker）/ Enhanced form elements
+- Transition, Transform, Opacity utilities
+- Filter utilities (blur, grayscale)
+- Max-width, Min-height utilities
+- npm package配信対応 / npm package distribution support
