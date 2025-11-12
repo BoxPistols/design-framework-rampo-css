@@ -16,7 +16,7 @@
     "build": "npm run build:css && npm run build:minify",
     "build:css": "node scripts/build.js",
     "build:minify": "node scripts/minify.js",
-    "dev": "npm run build:css -- --watch",
+    "dev": "postcss css/framework.css -o dist/rampo.css --watch",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -34,7 +34,7 @@
     "theming",
     "dark-mode"
   ],
-  "author": "",
+  "author": "Rampo CSS",
   "license": "MIT",
   "repository": {
     "type": "git",

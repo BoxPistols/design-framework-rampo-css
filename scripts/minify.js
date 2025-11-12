@@ -20,7 +20,7 @@ function minify() {
     // Minify
     const minified = new CleanCSS({
       level: 2,
-      compatibility: 'ie11'
+      compatibility: '*'
     }).minify(css);
 
     if (minified.errors.length > 0) {
