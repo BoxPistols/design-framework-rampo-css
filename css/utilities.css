@@ -155,6 +155,10 @@
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .w-auto {
   width: auto;
 }
@@ -163,8 +167,52 @@
   width: fit-content;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-2\/4 {
+  width: 50%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
 .h-full {
   height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .h-auto {
@@ -173,6 +221,22 @@
 
 .h-fit {
   height: fit-content;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .m-0 {
@@ -513,6 +577,138 @@
   padding-bottom: var(--space-8);
 }
 
+.py-10 {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.py-12 {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.py-20 {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pt-1 {
+  padding-top: var(--space-1);
+}
+
+.pt-2 {
+  padding-top: var(--space-2);
+}
+
+.pt-3 {
+  padding-top: var(--space-3);
+}
+
+.pt-4 {
+  padding-top: var(--space-4);
+}
+
+.pt-6 {
+  padding-top: var(--space-6);
+}
+
+.pt-8 {
+  padding-top: var(--space-8);
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.pr-1 {
+  padding-right: var(--space-1);
+}
+
+.pr-2 {
+  padding-right: var(--space-2);
+}
+
+.pr-3 {
+  padding-right: var(--space-3);
+}
+
+.pr-4 {
+  padding-right: var(--space-4);
+}
+
+.pr-6 {
+  padding-right: var(--space-6);
+}
+
+.pr-8 {
+  padding-right: var(--space-8);
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pb-1 {
+  padding-bottom: var(--space-1);
+}
+
+.pb-2 {
+  padding-bottom: var(--space-2);
+}
+
+.pb-3 {
+  padding-bottom: var(--space-3);
+}
+
+.pb-4 {
+  padding-bottom: var(--space-4);
+}
+
+.pb-6 {
+  padding-bottom: var(--space-6);
+}
+
+.pb-8 {
+  padding-bottom: var(--space-8);
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pl-1 {
+  padding-left: var(--space-1);
+}
+
+.pl-2 {
+  padding-left: var(--space-2);
+}
+
+.pl-3 {
+  padding-left: var(--space-3);
+}
+
+.pl-4 {
+  padding-left: var(--space-4);
+}
+
+.pl-6 {
+  padding-left: var(--space-6);
+}
+
+.pl-8 {
+  padding-left: var(--space-8);
+}
+
 .bg-primary {
   background-color: var(--primary);
 }
@@ -649,8 +845,16 @@
   color: var(--gray-900);
 }
 
+.rounded-none {
+  border-radius: 0;
+}
+
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .rounded-md {
@@ -663,6 +867,14 @@
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-full {
@@ -874,16 +1086,52 @@
   opacity: 0;
 }
 
+.opacity-10 {
+  opacity: 0.1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
 .opacity-25 {
   opacity: 0.25;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-40 {
+  opacity: 0.4;
 }
 
 .opacity-50 {
   opacity: 0.5;
 }
 
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
 .opacity-75 {
   opacity: 0.75;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-95 {
+  opacity: 0.95;
 }
 
 .opacity-100 {
@@ -1217,8 +1465,17 @@
   opacity: 0.75;
 }
 
+.hover\:opacity-90:hover {
+  opacity: 0.9;
+}
+
 .hover\:opacity-100:hover {
   opacity: 1;
+}
+
+.hover\:scale-95:hover {
+  --rampo-scale-x: 0.95;
+  --rampo-scale-y: 0.95;
 }
 
 .hover\:scale-105:hover {
@@ -1229,6 +1486,70 @@
 .hover\:scale-110:hover {
   --rampo-scale-x: 1.1;
   --rampo-scale-y: 1.1;
+}
+
+.hover\:rotate-3:hover {
+  --rampo-rotate: 3deg;
+}
+
+.hover\:rotate-6:hover {
+  --rampo-rotate: 6deg;
+}
+
+.hover\:rotate-12:hover {
+  --rampo-rotate: 12deg;
+}
+
+.hover\:-rotate-3:hover {
+  --rampo-rotate: -3deg;
+}
+
+.hover\:-rotate-6:hover {
+  --rampo-rotate: -6deg;
+}
+
+.hover\:-rotate-12:hover {
+  --rampo-rotate: -12deg;
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--primary);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--secondary);
+}
+
+.hover\:bg-gray-50:hover {
+  background-color: var(--gray-50);
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: var(--gray-100);
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: var(--gray-200);
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary);
+}
+
+.hover\:text-secondary:hover {
+  color: var(--secondary);
+}
+
+.hover\:text-white:hover {
+  color: var(--white);
+}
+
+.hover\:text-gray-700:hover {
+  color: var(--gray-700);
+}
+
+.hover\:text-gray-900:hover {
+  color: var(--gray-900);
 }
 
 .focus\:outline-none:focus {

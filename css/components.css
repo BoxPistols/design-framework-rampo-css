@@ -17,7 +17,7 @@
 .btn:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.15);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
 }
 
 .btn:disabled {
@@ -154,7 +154,7 @@
   outline: 2px solid transparent;
   outline-offset: 2px;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.15);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
 }
 
 .form-input:invalid {
