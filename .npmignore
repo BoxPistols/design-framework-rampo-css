@@ -1,0 +1,26 @@
+# Development files
+node_modules
+.vscode
+.git
+.gitignore
+
+# Source files (we include css/ in package.json files)
+html/
+js/
+example.html
+
+# Build files
+scripts/
+
+# Documentation (we keep README.md)
+*.md
+!README.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~

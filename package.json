@@ -1,0 +1,57 @@
+{
+  "name": "rampo-css",
+  "version": "1.0.0",
+  "description": "A modern, utility-first CSS framework inspired by Tailwind CSS with built-in components and theming support",
+  "main": "dist/rampo.min.css",
+  "style": "dist/rampo.min.css",
+  "unpkg": "dist/rampo.min.css",
+  "jsdelivr": "dist/rampo.min.css",
+  "files": [
+    "dist",
+    "css",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:minify",
+    "build:css": "node scripts/build.js",
+    "build:minify": "node scripts/minify.js",
+    "dev": "postcss css/framework.css -o dist/rampo.css --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "utility-first",
+    "tailwind",
+    "responsive",
+    "components",
+    "design-system",
+    "ui-framework",
+    "frontend",
+    "flexbox",
+    "grid",
+    "theming",
+    "dark-mode"
+  ],
+  "author": "Rampo CSS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoxPistols/design-framework-rampo-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BoxPistols/design-framework-rampo-css/issues"
+  },
+  "homepage": "https://github.com/BoxPistols/design-framework-rampo-css#readme",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.1",
+    "autoprefixer": "^10.4.20"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

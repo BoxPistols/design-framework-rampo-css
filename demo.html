@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rampo CSS - Component Library & Demo</title>
+  <link rel="stylesheet" href="./dist/rampo.min.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg-secondary);
+      padding: 2rem 0;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .demo-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+
+    .demo-subtitle {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .demo-description {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .demo-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .demo-item {
+      padding: 1rem;
+      border: 1px solid var(--border-light);
+      border-radius: 0.375rem;
+    }
+
+    .code-snippet {
+      background: var(--gray-900);
+      color: var(--gray-100);
+      padding: 1rem;
+      border-radius: 0.375rem;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+
+    .color-swatch {
+      width: 100%;
+      height: 80px;
+      border-radius: 0.375rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+    }
+
+    .nav-sidebar {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .nav-sidebar a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-sidebar a:hover {
+      color: var(--primary);
+      border-left-color: var(--primary);
+      background: var(--bg-tertiary);
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="max-width: 1400px;">
+    <!-- Header -->
+    <header class="text-center mb-8">
+      <h1 class="text-5xl mb-4" style="font-weight: 700; color: var(--primary);">Rampo CSS</h1>
+      <p class="text-xl text-gray-600">Modern Utility-First CSS Framework</p>
+      <p class="text-gray-500 mt-2">A complete component library and utility classes demonstration</p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <!-- Sidebar Navigation -->
+      <aside class="lg:col-span-1">
+        <div class="demo-section">
+          <h3 class="demo-title" style="font-size: 1rem;">目次 / Contents</h3>
+          <nav class="nav-sidebar">
+            <a href="#colors">Colors</a>
+            <a href="#typography">Typography</a>
+            <a href="#buttons">Buttons</a>
+            <a href="#forms">Forms</a>
+            <a href="#cards">Cards</a>
+            <a href="#alerts">Alerts</a>
+            <a href="#navigation">Navigation</a>
+            <a href="#badges">Badges</a>
+            <a href="#layout">Layout</a>
+            <a href="#spacing">Spacing</a>
+            <a href="#utilities">Utilities</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="lg:col-span-3">
+
+        <!-- Colors Section -->
+        <section id="colors" class="demo-section">
+          <h2 class="demo-title">Colors / カラーパレット</h2>
+          <p class="demo-description">Rampo CSS provides a comprehensive color system with semantic colors and gray scale.</p>
+
+          <h3 class="demo-subtitle">Semantic Colors</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div>
+              <div class="color-swatch bg-primary">Primary</div>
+              <code class="text-sm">.bg-primary</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-secondary">Secondary</div>
+              <code class="text-sm">.bg-secondary</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-success">Success</div>
+              <code class="text-sm">.bg-success</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-warning">Warning</div>
+              <code class="text-sm">.bg-warning</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-error">Error</div>
+              <code class="text-sm">.bg-error</code>
+            </div>
+          </div>
+
+          <h3 class="demo-subtitle">Gray Scale</h3>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div>
+              <div class="color-swatch bg-gray-100" style="color: #000;">Gray 100</div>
+              <code class="text-sm">.bg-gray-100</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-gray-300" style="color: #000;">Gray 300</div>
+              <code class="text-sm">.bg-gray-300</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-gray-500">Gray 500</div>
+              <code class="text-sm">.bg-gray-500</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-gray-700">Gray 700</div>
+              <code class="text-sm">.bg-gray-700</code>
+            </div>
+            <div>
+              <div class="color-swatch bg-gray-900">Gray 900</div>
+              <code class="text-sm">.bg-gray-900</code>
+            </div>
+          </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="typography" class="demo-section">
+          <h2 class="demo-title">Typography / タイポグラフィ</h2>
+          <p class="demo-description">Text styles and formatting options.</p>
+
+          <div class="demo-grid">
+            <div>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </div>
+          </div>
+
+          <h3 class="demo-subtitle">Text Utilities</h3>
+          <div class="demo-grid">
+            <p class="text-left">Left aligned text</p>
+            <p class="text-center">Center aligned text</p>
+            <p class="text-right">Right aligned text</p>
+            <p class="font-bold">Bold text</p>
+            <p class="font-normal">Normal text</p>
+            <p class="italic">Italic text</p>
+            <p class="uppercase">Uppercase text</p>
+            <p class="lowercase">LOWERCASE TEXT</p>
+            <p class="capitalize">capitalize text</p>
+          </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section id="buttons" class="demo-section">
+          <h2 class="demo-title">Buttons / ボタン</h2>
+          <p class="demo-description">Various button styles and sizes.</p>
+
+          <h3 class="demo-subtitle">Button Variants</h3>
+          <div class="flex flex-wrap gap-4 mb-6">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-outline">Outline</button>
+            <button class="btn btn-primary" disabled>Disabled</button>
+          </div>
+
+          <h3 class="demo-subtitle">Button Sizes</h3>
+          <div class="flex flex-wrap items-center gap-4 mb-6">
+            <button class="btn btn-primary btn-sm">Small</button>
+            <button class="btn btn-primary">Medium</button>
+            <button class="btn btn-primary btn-lg">Large</button>
+          </div>
+
+          <h3 class="demo-subtitle">Button Group</h3>
+          <div class="btn-group mb-4">
+            <button class="btn btn-outline">Left</button>
+            <button class="btn btn-outline">Center</button>
+            <button class="btn btn-outline">Right</button>
+          </div>
+
+          <div class="code-snippet">
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;
+          </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms" class="demo-section">
+          <h2 class="demo-title">Forms / フォーム</h2>
+          <p class="demo-description">Form elements and input styles.</p>
+
+          <form>
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input type="text" class="form-input" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" class="form-input" id="email" placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="country">Country</label>
+              <select class="form-input form-select" id="country">
+                <option>Japan</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Canada</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="date">Date</label>
+              <input type="date" class="form-input form-date" id="date">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-input form-textarea" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+
+            <div class="form-group">
+              <input type="checkbox" class="form-checkbox" id="agree">
+              <label for="agree">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards" class="demo-section">
+          <h2 class="demo-title">Cards / カード</h2>
+          <p class="demo-description">Card components for content containers.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card">
+              <div class="card-header">
+                <h3>Card Title</h3>
+              </div>
+              <div class="card-body">
+                <p>This is a standard card with header, body, and footer sections. Perfect for displaying content in a structured way.</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary btn-sm">Action</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3>Image Card</h3>
+              </div>
+              <div class="card-body">
+                <div class="bg-gray-200 rounded mb-4" style="height: 150px; display: flex; align-items: center; justify-content: center;">
+                  <span class="text-gray-500">Image Placeholder</span>
+                </div>
+                <p>Cards can contain images, text, and interactive elements.</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Alerts Section -->
+        <section id="alerts" class="demo-section">
+          <h2 class="demo-title">Alerts / アラート</h2>
+          <p class="demo-description">Alert messages for different contexts.</p>
+
+          <div class="demo-grid">
+            <div class="alert alert-info">
+              <strong>Info:</strong> This is an informational alert message.
+            </div>
+            <div class="alert alert-success">
+              <strong>Success!</strong> Your action was completed successfully.
+            </div>
+            <div class="alert alert-warning">
+              <strong>Warning:</strong> Please review this important information.
+            </div>
+            <div class="alert alert-error">
+              <strong>Error:</strong> Something went wrong. Please try again.
+            </div>
+          </div>
+
+          <div class="code-snippet">
+&lt;div class="alert alert-success"&gt;Success message&lt;/div&gt;
+&lt;div class="alert alert-error"&gt;Error message&lt;/div&gt;
+          </div>
+        </section>
+
+        <!-- Navigation Section -->
+        <section id="navigation" class="demo-section">
+          <h2 class="demo-title">Navigation / ナビゲーション</h2>
+          <p class="demo-description">Navigation components and menu bars.</p>
+
+          <nav class="navbar">
+            <a href="#" class="navbar-brand">Brand</a>
+            <ul class="nav">
+              <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- Badges Section -->
+        <section id="badges" class="demo-section">
+          <h2 class="demo-title">Badges / バッジ</h2>
+          <p class="demo-description">Small labels for status and categories.</p>
+
+          <div class="flex flex-wrap gap-4">
+            <span class="badge badge-primary">Primary</span>
+            <span class="badge badge-success">Success</span>
+            <span class="badge badge-warning">Warning</span>
+            <span class="badge badge-error">Error</span>
+            <h4>Heading with <span class="badge badge-primary">New</span></h4>
+          </div>
+        </section>
+
+        <!-- Layout Section -->
+        <section id="layout" class="demo-section">
+          <h2 class="demo-title">Layout / レイアウト</h2>
+          <p class="demo-description">Grid and flexbox layout utilities.</p>
+
+          <h3 class="demo-subtitle">CSS Grid</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-primary text-white p-4 rounded text-center">Grid Item 1</div>
+            <div class="bg-primary text-white p-4 rounded text-center">Grid Item 2</div>
+            <div class="bg-primary text-white p-4 rounded text-center">Grid Item 3</div>
+          </div>
+
+          <h3 class="demo-subtitle">Flexbox</h3>
+          <div class="flex justify-between items-center gap-4 bg-gray-100 p-4 rounded mb-6">
+            <div class="bg-primary text-white p-4 rounded">Flex Item 1</div>
+            <div class="bg-primary text-white p-4 rounded">Flex Item 2</div>
+            <div class="bg-primary text-white p-4 rounded">Flex Item 3</div>
+          </div>
+
+          <h3 class="demo-subtitle">Container</h3>
+          <div class="container bg-gray-100 p-4 rounded">
+            <p>This container has a max-width and is centered on the page.</p>
+          </div>
+        </section>
+
+        <!-- Spacing Section -->
+        <section id="spacing" class="demo-section">
+          <h2 class="demo-title">Spacing / スペーシング</h2>
+          <p class="demo-description">Margin and padding utilities.</p>
+
+          <h3 class="demo-subtitle">Margin Examples</h3>
+          <div class="bg-gray-100 p-4 rounded mb-6">
+            <div class="bg-white p-2 mb-2 m-0 border">m-0 (no margin)</div>
+            <div class="bg-white p-2 mb-2 m-2 border">m-2</div>
+            <div class="bg-white p-2 mb-2 m-4 border">m-4</div>
+            <div class="bg-white p-2 mb-2 mx-auto border" style="width: 200px;">mx-auto (centered)</div>
+          </div>
+
+          <h3 class="demo-subtitle">Padding Examples</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="bg-gray-100 p-0 rounded border">p-0</div>
+            <div class="bg-gray-100 p-4 rounded border">p-4</div>
+            <div class="bg-gray-100 p-8 rounded border">p-8</div>
+          </div>
+        </section>
+
+        <!-- Utilities Section -->
+        <section id="utilities" class="demo-section">
+          <h2 class="demo-title">Utilities / ユーティリティ</h2>
+          <p class="demo-description">Additional utility classes for common use cases.</p>
+
+          <h3 class="demo-subtitle">Border Radius</h3>
+          <div class="flex flex-wrap gap-4 mb-6">
+            <div class="bg-primary text-white p-4 rounded">rounded</div>
+            <div class="bg-primary text-white p-4 rounded-md">rounded-md</div>
+            <div class="bg-primary text-white p-4 rounded-lg">rounded-lg</div>
+            <div class="bg-primary text-white p-4 rounded-full px-6">rounded-full</div>
+          </div>
+
+          <h3 class="demo-subtitle">Shadows</h3>
+          <div class="flex flex-wrap gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow">shadow</div>
+            <div class="bg-white p-4 rounded shadow-md">shadow-md</div>
+            <div class="bg-white p-4 rounded shadow-lg">shadow-lg</div>
+          </div>
+
+          <h3 class="demo-subtitle">Opacity</h3>
+          <div class="flex flex-wrap gap-4 mb-6">
+            <div class="bg-primary text-white p-4 rounded opacity-100">100%</div>
+            <div class="bg-primary text-white p-4 rounded opacity-75">75%</div>
+            <div class="bg-primary text-white p-4 rounded opacity-50">50%</div>
+            <div class="bg-primary text-white p-4 rounded opacity-25">25%</div>
+          </div>
+
+          <h3 class="demo-subtitle">Transitions & Hover Effects</h3>
+          <div class="flex flex-wrap gap-4 mb-6">
+            <button class="bg-primary text-white p-4 rounded transition hover:opacity-75">Hover: Opacity</button>
+            <button class="bg-primary text-white p-4 rounded transition hover:scale-105">Hover: Scale</button>
+            <button class="bg-primary text-white p-4 rounded transition duration-300 hover:bg-secondary">Hover: Color</button>
+          </div>
+
+          <h3 class="demo-subtitle">Display Utilities</h3>
+          <div class="demo-grid">
+            <div class="bg-gray-100 p-4 rounded">
+              <span class="block bg-primary text-white p-2 mb-2">block</span>
+              <span class="inline-block bg-primary text-white p-2 mr-2">inline-block</span>
+              <span class="inline-block bg-primary text-white p-2">inline-block</span>
+            </div>
+          </div>
+
+          <h3 class="demo-subtitle">Text Utilities</h3>
+          <div class="demo-grid">
+            <p class="truncate" style="max-width: 200px;">This is a very long text that will be truncated with ellipsis</p>
+            <p class="whitespace-nowrap overflow-auto">This text will not wrap to the next line</p>
+          </div>
+        </section>
+
+        <!-- Responsive Section -->
+        <section class="demo-section">
+          <h2 class="demo-title">Responsive Design / レスポンシブデザイン</h2>
+          <p class="demo-description">Responsive utility classes with breakpoint modifiers.</p>
+
+          <div class="bg-primary text-white p-4 rounded mb-4">
+            <p class="text-sm md:text-lg lg:text-2xl">
+              Text size changes based on screen size: small on mobile, large on tablet, extra large on desktop
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-gray-100 p-4 rounded">1 column on mobile, 2 on tablet, 3 on desktop</div>
+            <div class="bg-gray-100 p-4 rounded">Column 2</div>
+            <div class="bg-gray-100 p-4 rounded">Column 3</div>
+          </div>
+
+          <div class="code-snippet mt-4">
+&lt;!-- Breakpoints --&gt;
+sm: 640px   - Small devices (tablets)
+md: 768px   - Medium devices (small laptops)
+lg: 1024px  - Large devices (desktops)
+xl: 1280px  - Extra large devices
+
+&lt;!-- Usage --&gt;
+&lt;div class="text-sm md:text-lg lg:text-2xl"&gt;...&lt;/div&gt;
+&lt;div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"&gt;...&lt;/div&gt;
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-12 py-8 border-t">
+      <p class="text-gray-600 mb-2">Rampo CSS - Modern Utility-First CSS Framework</p>
+      <p class="text-gray-500 text-sm">
+        <a href="https://github.com/BoxPistols/design-framework-rampo-css" class="text-primary hover:opacity-75 transition">
+          View on GitHub
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
